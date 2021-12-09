@@ -1,11 +1,14 @@
 .welcome {
-  width: 320px;
+  width: 100%;
   height: 300px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  cursor: pointer;
+  
+}
+
+.welcomeContainer {
+  display: inline-block;
 }
 
 .title {
@@ -39,7 +42,7 @@
   font-size: 2.8em;
   opacity: 0;
   animation: fade-in 2.5s forwards 2s;
-  display: inline-block;
+  cursor: pointer;
 
   &:hover {
     opacity: 1;
@@ -49,6 +52,7 @@
 }
 
 .moreInfo {
+  font-size: 1.2em;
   opacity: 0;
   transition: opacity ease-out 1.2s;
 }
