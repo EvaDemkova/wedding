@@ -1,0 +1,64 @@
+.welcome {
+	width: 320px;
+	height: 300px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+    
+}
+
+.title {
+	font-family: "Shalimar", cursive;
+	font-size: 5em;
+    opacity: 0;
+    animation: fade-in 2.5s forwards 0.5s ;
+}
+
+.svd,
+.date,
+.title,
+.moreInfo {
+	text-align: center;
+}
+
+.svd,
+.date,
+.moreInfo {
+	// font-family: 'Reenie Beanie', cursive;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+.svd {
+	font-size: 1.3em;
+    opacity: 0;
+    animation: fade-in 2.5s forwards 1.3s ;
+}
+
+.date {
+	font-size: 3.2em;
+    opacity: 0;
+    animation: fade-in 2.5s forwards 2s ;
+
+    &:hover {
+        opacity:1;
+        transform: scale(1.1);
+        transition: transform ease-out 0.4s;
+    }
+}
+
+.moreInfo {
+	opacity: 0;
+	transition: opacity ease-out 1.2s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
