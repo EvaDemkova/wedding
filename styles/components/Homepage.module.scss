@@ -44,7 +44,7 @@
   &:hover {
     opacity: 1;
     transform: scale(1.1);
-    transition: transform forwards 0.4s;
+    transition: transform ease-out 0.4s;
   }
 }
 
