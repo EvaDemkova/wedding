@@ -1,0 +1,20 @@
+@use '../animations.scss';
+@include animations.fade-in;
+
+
+.navbar {
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+}
+
+.logo {
+    opacity: 0;
+    width: 30px;
+}
+
+.first_half, .second_half {
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+}

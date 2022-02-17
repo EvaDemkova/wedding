@@ -1,0 +1,12 @@
+{
+	"navbar_part1": [
+		{ "path": "/aboutus", "title": "Náš príbeh" },
+		{ "path": "/ceremony", "title": "Obrad" },
+		{ "path": "/celebration", "title": "Oslava" }
+	],
+	"navbar_part2": [
+		{ "path": "/accomodation", "title": "Ubytovanie" },
+		{ "path": "/rsvp", "title": "RSVP" },
+		{ "path": "/contacts", "title": "Kontakty" }
+	]
+}

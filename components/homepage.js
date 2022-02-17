@@ -1,22 +1,20 @@
-import React, { useRef } from "react";
-import styles from '../styles/components/Homepage.module.scss'
-
+import React, { useRef, useEffect, useState } from "react";
+import styles from "../styles/components/Homepage.module.scss";
+import EnterBtn from "./enterBtn";
 
 const Homepage = () => {
-    const nodeRef = useRef()
-
-    const showMoreInfo = () => {
-        nodeRef.current.style.opacity = 1
-		nodeRef.current.style.visibility = "visible"
-    }
+	const nodeRef = useRef();
 
 	return (
-		<div className={styles.welcome} >
+		<div className={styles.welcome}>
 			<div className={styles.welcomeContainer}>
-			    <div className={styles.title}>Evka & Vavro</div>
-    			<div className={styles.svd}>save the date</div>
-    			<div className={styles.date} onClick={showMoreInfo}>13.8.2022</div>
-    			<div className={styles.moreInfo} ref={nodeRef}>... viac informácií onedlho ... </div>
+				<div className={styles.title} ref={nodeRef}>
+					Evka & Vavro
+				</div>
+				<div className={styles.svd}>save the date</div>
+				<div className={styles.date}>13.8.2022</div>
+
+				<EnterBtn />
 			</div>
 		</div>
 	);
