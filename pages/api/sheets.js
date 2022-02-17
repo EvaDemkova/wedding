@@ -36,9 +36,6 @@ async function handler(req, res) {
     });
 
     res.status(200).json({ POST: response });
-
-    // res.status(201).json(response);
-    // res.send()
   }
 
   if (req.method === 'GET') {
