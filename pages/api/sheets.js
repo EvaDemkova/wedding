@@ -18,24 +18,24 @@ async function handler(req, res) {
       ],
     });
 
-    // const sheets = google.sheets({
-    //   auth,
-    //   version: 'v4',
-    // });
+    const sheets = google.sheets({
+      auth,
+      version: 'v4',
+    });
 
-    // const response = await sheets.spreadsheets.values.append({
-    //   spreadsheetId: process.env.GOOGLE_SHEETS_ID,
-    //   range: 'falala!A1:H5',
-    //   valueInputOption: 'USER_ENTERED',
-    //   insertDataOption: 'INSERT_ROWS',
-    //   requestBody: {
-    //     range: 'falala!A1:H5',
-    //     majorDimension: 'ROWS',
-    //     values: [[1, 2, 3]],
-    //   },
-    // });
+    const response = await sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.GOOGLE_SHEETS_ID,
+      range: 'falala!A1:H5',
+      valueInputOption: 'USER_ENTERED',
+      insertDataOption: 'INSERT_ROWS',
+      requestBody: {
+        range: 'falala!A1:H5',
+        majorDimension: 'ROWS',
+        values: [[1, 2, 3]],
+      },
+    });
 
-    res.status(200).json({ POST: auth });
+    res.status(200).json({ POST: response });
 
     // res.status(201).json(response);
     // res.send()
