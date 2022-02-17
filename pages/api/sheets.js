@@ -5,18 +5,18 @@ async function handler(req, res) {
   if (req.method === 'POST') {
     const { body } = req;
 
-    // const auth = new google.auth.GoogleAuth({
-    //   credentials: {
-    //     client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
-    //     client_id: process.env.GOOGLE_SHEETS_CLIENT_ID,
-    //     private_key: privateKey.replace(/\\n/g, '\n'),
-    //   },
-    //   scopes: [
-    //     'https://www.googleapis.com/auth/drive',
-    //     'https://www.googleapis.com/auth/drive.file',
-    //     'https://www.googleapis.com/auth/spreadsheets',
-    //   ],
-    // });
+    const auth = new google.auth.GoogleAuth({
+      credentials: {
+        client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
+        client_id: process.env.GOOGLE_SHEETS_CLIENT_ID,
+        private_key: privateKey.replace(/\\n/g, '\n'),
+      },
+      scopes: [
+        'https://www.googleapis.com/auth/drive',
+        'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/spreadsheets',
+      ],
+    });
 
     // const sheets = google.sheets({
     //   auth,
@@ -35,8 +35,7 @@ async function handler(req, res) {
     //   },
     // });
 
-    console.log(body);
-    res.status(200).json({ POST: body });
+    res.status(200).json({ POST: auth });
 
     // res.status(201).json(response);
     // res.send()
