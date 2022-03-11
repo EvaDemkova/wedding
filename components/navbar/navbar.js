@@ -3,7 +3,7 @@ import styles from "../../styles/components/Navbar.module.scss";
 import data from "../../common/data.json";
 import LinkBtn from "../linkBtn";
 import Image from "next/image";
-import logo from "../../public/images/hearts.svg";
+import logo from "../../public/svg/hearts.svg";
 import useWindowSize from "../../hooks/useWindowSize";
 import useMobileLayout from "../../hooks/useMobileLayout";
 import axios from "axios";
@@ -13,8 +13,7 @@ export default function Navbar() {
 	const windowSize = useWindowSize()
 	const isMobile = useMobileLayout(windowSize, navBreakpoint)
 
-	
-	function submitHandler(data) {
+		function submitHandler(data) {
 		console.log(data);
 		// fetch('/api/sheet', {
 		//   method: 'POST',

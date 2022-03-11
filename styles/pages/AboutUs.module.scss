@@ -1,6 +1,7 @@
 @use "../animations.scss";
 @include animations.fade-in;
 
+
 .heading {
 	font-size: 18px;
 	font-weight: 700;
@@ -15,8 +16,11 @@
 	margin-top: 30px;
 	font-size: 14px;
 	font-weight: 400;
-
 	letter-spacing: 2px;
 	opacity: 0;
 	animation: fade-in 0.75s forwards 0.5s;
+}
+
+.gallery {
+	padding: 5% 10%;
 }

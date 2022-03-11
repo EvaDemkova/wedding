@@ -17,7 +17,7 @@ const RSVP = () => {
 							}, 500)
 						}>
 						{(props) => {
-							return <FieldArray name="guests" component={GuestForm} />;
+							return <FieldArray name="guests" component={GuestForm} {...props}/>;
 						}}
 					</Formik>
 				</div>

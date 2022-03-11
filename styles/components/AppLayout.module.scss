@@ -11,5 +11,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+  overflow: auto;
 }
 
+.main::-webkit-scrollbar {
+	display: none;
+}

@@ -1,31 +1,54 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import Layout from "../../components/layout";
 import styles from "../../styles/pages/AboutUs.module.scss";
+import Gallery from "react-photo-gallery-next";
+import photos from "../../data/photos.json";
+import Carousel, { Modal, ModalGateway } from "react-images";
+import useMobileLayout from "../../hooks/useMobileLayout";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const AboutUs = () => {
+	const [currentImage, setCurrentImage] = useState(0);
+	const [viewerIsOpen, setViewerIsOpen] = useState(false);
+	const windowSize = useWindowSize()
+	const [columns, setColumns] = useState(6)
+	console.log(windowSize)
+
+	useEffect(() => {
+		
+		if (windowSize && windowSize.width > 2000) {
+			setColumns(6)
+		} else if (windowSize && windowSize.width > 1536)  {
+			setColumns(5)
+		} else if (windowSize && windowSize.width > 1200) {
+			setColumns(4)
+		}  else if (windowSize && windowSize.width > 900) {
+			setColumns(3)
+		} else {
+			setColumns(2)
+		}
+		
+	}, [windowSize]);
+
+
+
+	const openLightbox = useCallback((event, { photo, index }) => {
+		setCurrentImage(index);
+		setViewerIsOpen(true);
+	}, []);
+
+	const closeLightbox = () => {
+		setCurrentImage(0);
+		setViewerIsOpen(false);
+	};
+
 	return (
 		<>
 			<Layout>
-				<div >
+				<div className={styles.wrapper}>
 					<h1 className={styles.heading}>Náš príbeh</h1>
+
 					<p className={styles.paragraph}>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus
-						aliquam metus. Nullam feugiat, turpis at pulvinar vulputate, erat libero
-						tristique tellus, nec bibendum odio risus sit amet ante. Etiam posuere lacus
-						quis dolor. Duis pulvinar. Duis condimentum augue id magna semper rutrum.
-						Proin in tellus sit amet nibh dignissim sagittis. Nullam sit amet magna in
-						magna gravida vehicula. Nulla pulvinar eleifend sem. Phasellus et lorem id
-						felis nonummy placerat. Aliquam erat volutpat. Vestibulum erat nulla,
-						ullamcorper nec, rutrum non, nonummy ac, erat. Nulla turpis magna, cursus
-						sit amet, suscipit a, interdum id, felis. In sem justo, commodo ut, suscipit
-						at, pharetra vitae, orci. Lorem ipsum dolor sit amet, consectetuer
-						adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient
-						montes, nascetur ridiculus mus. Duis viverra diam non justo. Aliquam in
-						lorem sit amet leo accumsan lacinia. Mauris tincidunt sem sed arcu. Nullam
-						rhoncus aliquam metus. Maecenas ipsum velit, consectetuer eu lobortis ut,
-						dictum at dui. Etiam quis quam. Cras elementum.
-					</p>
-					<p  className={styles.paragraph}>
 						In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel
 						imperdiet sapien wisi sed libero. Donec vitae arcu. Curabitur bibendum justo
 						non orci. Fusce wisi. Etiam egestas wisi a erat. Praesent dapibus. Nulla non
@@ -33,6 +56,31 @@ const AboutUs = () => {
 						erat volutpat. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at
 						dui.
 					</p>
+					<div className={styles.gallery}>
+						<h1 className={styles.heading} style={{textAlign: "center"}}>... my ...</h1>
+						<Gallery
+							photos={photos.resources}
+							direction={"column"}
+							columns={columns}
+							
+							onClick={openLightbox}
+						/>
+						<ModalGateway>
+							{viewerIsOpen ? (
+								<Modal onClose={closeLightbox}>
+									<Carousel
+										currentIndex={currentImage}
+										views={photos.resources.map((x, _i) => ({
+											key: _i,
+											...x,
+											srcset: x.srcSet,
+											caption: x.title,
+										}))}
+									/>
+								</Modal>
+							) : null}
+						</ModalGateway>
+					</div>
 				</div>
 			</Layout>
 		</>
