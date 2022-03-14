@@ -22,9 +22,7 @@ const AboutUs = () => {
 			setColumns(5)
 		} else if (windowSize && windowSize.width > 1200) {
 			setColumns(4)
-		}  else if (windowSize && windowSize.width > 900) {
-			setColumns(3)
-		} else {
+		}  else  {
 			setColumns(2)
 		}
 		
