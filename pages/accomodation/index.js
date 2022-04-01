@@ -5,7 +5,7 @@ import styles from "../../styles/pages/AboutUs.module.scss";
 const Accomodation = () => {
 	return (
 		<>
-			<Layout>
+			
 				<div className={styles.aboutus}>
 					<h1 className={styles.heading}>Accomodation</h1>
 					<p className={styles.paragraph}>
@@ -15,7 +15,7 @@ const Accomodation = () => {
 						Na víkend 12-14.8 sme zarezervovali penzión Biely Dom ! 
 					</p>
 				</div>
-			</Layout>
+			
 		</>
 	);
 };

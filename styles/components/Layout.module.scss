@@ -10,9 +10,9 @@
 .container {
 	margin-top: 20px;
 	margin: auto;
-	width: 85%;
+	width: 90%;
 	// height: 700px;
-	padding: 30px;
+	padding: 7px;
 	overflow:unset;
 
 	// glassy effect
@@ -27,6 +27,7 @@
 	
 	@media (min-width: 600px) {
 		width: 80%;
+		padding: 30px
 	}
 	@media (min-width: 900px) {
 		width: 75%;

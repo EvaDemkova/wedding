@@ -8,5 +8,13 @@
 		{ "path": "/accomodation", "title": "Ubytovanie" },
 		{ "path": "/rsvp", "title": "RSVP" },
 		{ "path": "/contacts", "title": "Kontakty" }
+	], 
+	"navbar" : [
+		{ "path": "/aboutus", "title": "Náš príbeh" },
+		{ "path": "/ceremony", "title": "Obrad" },
+		{ "path": "/celebration", "title": "Oslava" },
+		{ "path": "/accomodation", "title": "Ubytovanie" },
+		{ "path": "/rsvp", "title": "RSVP" },
+		{ "path": "/contacts", "title": "Kontakty" }
 	]
 }

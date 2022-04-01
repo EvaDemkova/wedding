@@ -1,0 +1,13 @@
+@use '../../animations.scss';
+@include animations.fade-in;
+
+.menu{
+    display: none ;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu.active {
+    display: block;
+    animation: fade-in 1s forwards;
+}

@@ -1,20 +1,47 @@
-@use '../animations.scss';
+@use "../animations.scss";
 @include animations.fade-in;
 
-
 .navbar {
-    display: flex;
-    justify-content:space-between;
-    padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
 }
 
 .logo {
-    opacity: 0;
-    width: 30px;
+	opacity: 0;
+	width: 30px;
 }
 
-.first_half, .second_half {
-    display: flex;
-    width: 40%;
-    justify-content: space-evenly;
+.first_half,
+.second_half {
+	display: flex;
+	width: 40%;
+	justify-content: space-evenly;
+}
+
+.mobile {
+	height: 81px;
+	// position: fixed;
+	z-index: 100;
+	margin: 0;
+	width: 100vw;
+}
+
+.menu {
+	z-index: 100;
+	position: fixed;
+	top: 80px;
+	margin: 0;
+	background-image: linear-gradient(
+		to right,
+		#e4e3de,
+		#dbdad5,
+		#d3d2cd,
+		#cfcec9,
+		#cccbc6,
+		#c9cac4,
+		#c5c7c4
+	);
+
+	width: 100vw;
 }

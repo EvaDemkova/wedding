@@ -12,7 +12,6 @@ const AboutUs = () => {
 	const [viewerIsOpen, setViewerIsOpen] = useState(false);
 	const windowSize = useWindowSize()
 	const [columns, setColumns] = useState(6)
-	console.log(windowSize)
 
 	useEffect(() => {
 		
@@ -42,7 +41,7 @@ const AboutUs = () => {
 
 	return (
 		<>
-			<Layout>
+			
 				<div className={styles.wrapper}>
 					<h1 className={styles.heading}>Náš príbeh</h1>
 
@@ -80,7 +79,7 @@ const AboutUs = () => {
 						</ModalGateway>
 					</div>
 				</div>
-			</Layout>
+			
 		</>
 	);
 };

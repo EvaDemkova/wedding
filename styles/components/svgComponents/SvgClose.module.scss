@@ -1,0 +1,14 @@
+@use '../../animations.scss';
+@include animations.fade-in;
+
+.close {
+    display: none;
+    opacity: 0;
+    cursor: pointer
+}
+
+.close.active {
+    
+    display: block;
+    animation: fade-in 1s forwards;
+}

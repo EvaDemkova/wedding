@@ -7,34 +7,67 @@ import {
   MenuItem,
   FormHelperText,
 } from '@mui/material';
-import { Formik, Form, Field, FieldArray } from 'formik';
+import { Formik, Form, Field, FieldArray, useFormikContext } from 'formik';
+import { alpha, styled } from '@mui/material/styles';
 
-const select = ({ field, id }) => {
-  // const formik = useFormikContext();
-  // const { setFieldValue } = formik;
+const select = ({ field, id, label, value, options }) => {
+ 
+  const formik = useFormikContext();
+  const {setFieldValue} = formik;
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    setFieldValue(field.name, e.target.value)
+  }
+
+  const CssSelect = styled(Select)({
+    '&:hover:not(.Mui-disabled):before': {
+      borderBottom: "2px solid white"
+    }, 
+    '&:after': {
+      borderBottom: "1px solid black"
+    },
+    '&': {
+      marginTop: '10px !important'
+    },
+    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+      borderColor: 'black'
+   
+    }
+
+  })
+  ;
+
+  const CssLabel= styled(FormLabel)({
+    '&.Mui-focused': {
+      color: "black"
+    },
+    '&':  {
+      color: "black",
+      fontWeight: '600', 
+      fontStyle: 'italic'
+    }
+  })
+ 
 
   return (
-    <FormControl variant='standard' sx={{ m: 1, minWidth: 200 }}>
-      <FormLabel sx={{ minWidth: 200 }}>Preferovaný typ alkoholu</FormLabel>
-      <Select
+    <FormControl variant="outlined" size="small" sx={{ m: "8px 8px 2px 8px", minWidth:"50%", justifyContent:"space-between" }} >
+      <CssLabel sx={{ minWidth: 200 }}>{label}</CssLabel>
+      <CssSelect
         labelId='demo-simple-select-standard-label'
         id={id}
         //   value={age}
-        onChange={handleChange}
+        onChange={(e)=>handleChange(e)}
         //   label="Age"
         name={field.name}
-        sx={{ minWidth: 200 }}
+        sx={{ mt: 1 }}
+        value={value}
       >
-        <MenuItem value=''>
-          <em>None</em>
-        </MenuItem>
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
-      </Select>
-      {/* <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText> */}
+        {
+          options.map((opt, i)=> {
+            return (  <MenuItem key={i} value={opt.value}>{opt.label}</MenuItem>)
+          })
+        }
+      </CssSelect>
     </FormControl>
   );
 };

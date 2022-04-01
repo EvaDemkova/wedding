@@ -8,7 +8,7 @@ import { Box } from "@mui/system";
 const Contacts = () => {
 	return (
 		<>
-			<Layout>
+			
 				<div className={styles.aboutus}>
 					<h1 className={styles.heading}>Kontakty na nás</h1>
 					<Box sx={{ my: "7%"  }}>
@@ -27,7 +27,7 @@ const Contacts = () => {
 						<Contact />
 					</Stack>
 				</div>
-			</Layout>
+			
 		</>
 	);
 };

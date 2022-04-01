@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import AlternateEmailRoundedIcon from '@mui/icons-material/AlternateEmailRounded';
-import SvgInstagram from './svgInstagram';
+import SvgInstagram from './svgComponents/svgInstagram.js';
 import data from '../data/abouts';
 
 const Contact = () => {

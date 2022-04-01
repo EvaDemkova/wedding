@@ -7,21 +7,30 @@ import GuestForm from "../../components/guestForm";
 const RSVP = () => {
 	return (
 		<>
-			<Layout>
-				<div className={styles.aboutus}>
-					<Formik
-						initialValues={{ guests: ["1"] }}
-						onSubmit={(values) =>
-							setTimeout(() => {
-								alert(JSON.stringify(values, null, 2));
-							}, 500)
-						}>
-						{(props) => {
-							return <FieldArray name="guests" component={GuestForm} {...props}/>;
-						}}
-					</Formik>
-				</div>
-			</Layout>
+			<div className={styles.aboutus}>
+				<h1 className={styles.heading}>RSVP: Répondez s'il vous plait</h1>
+				<p className={styles.paragraph} style={{ textAlign: "center" }}>
+					Viacerí z vás ste sa nás pýtali a ponúkali nám svoje pomocné ruky, chcem vás
+					preto ubezpečiť, že práve teraz nastal váš čas ako nám najlepšie pomôžete.
+				</p>
+				<p className={styles.paragraph} style={{ textAlign: "center" }}>
+					Pripravili sme pre každého hosťa krátky dotazník a budeme radi ak nám ho
+					vyplníte a odošlete :)
+				</p>
+				<Formik
+					initialValues={{
+						guests: [],
+					}}
+					onSubmit={(values) =>
+						setTimeout(() => {
+							alert(JSON.stringify(values, null, 2));
+						}, 500)
+					}>
+					{(props) => {
+						return <FieldArray name="guests" component={GuestForm} {...props} />;
+					}}
+				</Formik>
+			</div>
 		</>
 	);
 };

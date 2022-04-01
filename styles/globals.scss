@@ -30,3 +30,14 @@ a {
 * {
 	box-sizing: border-box;
 }
+
+@-webkit-keyframes autofill {
+    0%,100% {
+        color: #666;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill { 
+    -webkit-background-clip: text;
+}

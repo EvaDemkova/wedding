@@ -5,7 +5,7 @@ import styles from "../../styles/pages/AboutUs.module.scss";
 const Ceremony = () => {
 	return (
 		<>
-			<Layout>
+			
 				<div className={styles.aboutus}>
 					<h1 className={styles.heading}>Obrad</h1>
 					<p className={styles.paragraph}>
@@ -34,7 +34,7 @@ const Ceremony = () => {
 						dui.
 					</p>
 				</div>
-			</Layout>
+			
 		</>
 	);
 };
