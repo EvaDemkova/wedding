@@ -10,10 +10,8 @@ import {
 import { Formik, Form, Field, FieldArray, useFormikContext } from 'formik';
 import { alpha, styled } from '@mui/material/styles';
 
-const select = ({ field, id, label, value, options }) => {
- 
-  const formik = useFormikContext();
-  const {setFieldValue} = formik;
+const select = ({ form, field, id, label, value, options }) => {
+  const {setFieldValue} = form;
 
   const handleChange = (e) => {
     setFieldValue(field.name, e.target.value)

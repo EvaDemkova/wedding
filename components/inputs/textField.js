@@ -36,9 +36,8 @@ const CssLabel= styled(FormLabel)({
 })
 
 
-const textField = ({ field, id, label, disabled, onChage }) => {
-  const formik = useFormikContext();
-  const {setFieldValue} = formik;
+const textField = ({form, field, id, label, disabled, onChage }) => {
+  const {setFieldValue} = form;
 
   const handleChange = (e) => {
     setFieldValue(field.name, e.target.value)

@@ -8,7 +8,7 @@ const RSVP = () => {
 	return (
 		<>
 			<div className={styles.aboutus}>
-				<h1 className={styles.heading}>RSVP: Répondez s'il vous plait</h1>
+				<h1 className={styles.heading}>RSVP: Répondez s&aposil vous plait</h1>
 				<p className={styles.paragraph} style={{ textAlign: "center" }}>
 					Viacerí z vás ste sa nás pýtali a ponúkali nám svoje pomocné ruky, chcem vás
 					preto ubezpečiť, že práve teraz nastal váš čas ako nám najlepšie pomôžete.
