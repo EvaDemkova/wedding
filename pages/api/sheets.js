@@ -39,7 +39,7 @@ async function handler(req, res) {
       valueInputOption: 'USER_ENTERED',
       insertDataOption: 'INSERT_ROWS',
       requestBody: {
-        range: 'falala!A1:H5',
+        range: 'planning!A1:H5',
         majorDimension: 'ROWS',
         values: values,
       },
