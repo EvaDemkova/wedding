@@ -26,13 +26,14 @@ const Accomodation = () => {
 					<a
 						href="http://www.bielydom.sk/index.php?stranka=ubytovanie"
 						target="_blank"
+						rel="noreferrer" 
 						style={{ fontWeight: "bold", textDecoration: "underline", color: "#215d53", marginLeft: "5px" }}>
 						TU
 					</a>
 				</p>
 				<p className="fade-in">
 					Čo sa týka rezervácie, kontaktuje priamo penzión Biely Dom a nahláste heslo
-					<i>"Evka a Vavro"</i>, prípadne kontaktuje nás
+					<i>Evka a Vavro</i>, prípadne kontaktuje nás
 				</p>
 
 				<iframe
@@ -40,7 +41,7 @@ const Accomodation = () => {
 					width="100%"
 					height="300"
 					style={{ border: "0", marginTop: "50px" }}
-					allowfullscreen=""
+					allowFullScreen=""
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>

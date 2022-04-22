@@ -39,7 +39,7 @@ const Ceremony = () => {
 					width="100%"
 					height="300"
 					style={{ border: "0", marginTop: "50px" }}
-					allowfullscreen=""
+					allowFullScreen=""
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
