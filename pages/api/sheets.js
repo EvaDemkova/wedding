@@ -35,7 +35,7 @@ async function handler(req, res) {
    
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEETS_ID,
-      range: 'falala!A1:H5',
+      range: 'planning!A1:H5',
       valueInputOption: 'USER_ENTERED',
       insertDataOption: 'INSERT_ROWS',
       requestBody: {
