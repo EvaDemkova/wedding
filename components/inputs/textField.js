@@ -20,8 +20,17 @@ const CssTextField = styled(TextField)({
   '& .MuiInput-underline:hover:not(.Mui-disabled):before': {
     borderBottom: "2px solid #000000"
   },
-
-
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'black',
+    },
+    '&:hover fieldset': {
+      borderColor: 'black',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: 'black',
+    },
+  },
 });
 
 const CssLabel= styled(FormLabel)({
@@ -36,7 +45,7 @@ const CssLabel= styled(FormLabel)({
 })
 
 
-const textField = ({form, field, id, label, disabled, onChage }) => {
+const textField = ({form, field, id, label, disabled, onChage, multiline, minRows, variant, placeholder }) => {
   const {setFieldValue} = form;
 
   const handleChange = (e) => {
@@ -48,7 +57,7 @@ const textField = ({form, field, id, label, disabled, onChage }) => {
     <CssLabel >{label}</CssLabel>
       <CssTextField
         name={field.name}
-        variant='standard'
+        variant={variant? variant:'standard'}
         defaultValue=''
         disabled={disabled}
         error={false}
@@ -56,6 +65,9 @@ const textField = ({form, field, id, label, disabled, onChage }) => {
         id={id}
         // size="small"
         onChange={(e) => handleChange(e)}
+        multiline={multiline}
+        minRows={minRows}
+        placeholder={placeholder}
       />
     </FormControl>
   );

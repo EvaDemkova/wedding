@@ -1,4 +1,7 @@
+@use "animations.scss";
+@include animations.fade-in;
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Rubik:wght@300;400;700&family=Shalimar&display=swap");
+
 
 html,
 body {
@@ -40,4 +43,38 @@ a {
 
 input:-webkit-autofill { 
     -webkit-background-clip: text;
+}
+
+h1 {
+	font-size: 22px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	opacity: 0;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	text-align: center;
+	opacity: 0;
+}
+
+p {
+	margin-top: 30px;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	opacity: 0;
+}
+
+
+.fade-in {
+	animation: fade-in 0.75s forwards 0.5s;
+}
+
+.text-center {
+	text-align: center;
 }

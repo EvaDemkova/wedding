@@ -20,7 +20,7 @@ import TextField from "./inputs/textField";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Select from "./inputs/select";
 import Radios from "./inputs/radios";
-import styles from "../styles/pages/AboutUs.module.scss";
+import styles from "../styles/components/GuestForm.module.scss";
 
 const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 	const { values } = form;
@@ -33,12 +33,17 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 			border: "1px solid #cc0000",
 			color: "#cc0000",
 		},
+		"&:hover": {
+			backgroundColor: "#f0dede",
+			borderColor: "#cc0000"
+		}
 	});
 
 	const AddButton = styled(Button)({
-		backgroundColor: "#215d53",
-			color: "white",
-			fontWeight:"bold"
+		backgroundColor: "#0D4B1E",
+		color: "white",
+		fontWeight: "bold",
+		opacity: "0",
 		// "&": {
 		// 	// padding: "6px 8px 6px 13px",
 		// 	// minWidth: "38px",
@@ -46,6 +51,9 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 		// 	backgroundColor: "#000000",
 		// 	color: "#cc0000",
 		// },
+		"&:hover": {
+			backgroundColor: "#2d8c7c"
+		}
 	});
 
 	return (
@@ -89,8 +97,8 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 									direction={"row"}
 									justifyContent={"space-between"}
 									alignItems={"center"}
-									sx={{mx: 1}}>
-									<h3 className={styles.heading}>Hosť č.{index + 1}</h3>
+									sx={{ mx: 1 }}>
+									<h3 className={styles.heading}>Hosť {index + 1}</h3>
 									<CssButton
 										style={{}}
 										variant="outlined"
@@ -128,12 +136,12 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 												value: "domáca",
 											},
 											{
-												label: "Biele víno",
-												value: "biele víno",
+												label: "Víno",
+												value: "víno",
 											},
 											{
-												label: "Ružové víno",
-												value: "ružové víno",
+												label: "Pivo",
+												value: "pivo",
 											},
 											{
 												label: "Iné",
@@ -191,6 +199,10 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 												label: "Iné",
 												value: "iné",
 											},
+											{
+												label: "Žiadne",
+												value: "žiadne",
+											},
 										]}
 									/>
 									<Field
@@ -211,17 +223,35 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 									label="Budeš chcieť zarezervovať ubytovanie?"
 									value={getIn(values, `guests.${index}.accomodation`)}
 								/>
+								<Field
+									component={TextField}
+									name={`guests.${index}.note`}
+									id={`id_note_${index}`}
+									label="Poznámka"
+									value={getIn(values, `guests.${index}.note`)}
+									variant="outlined"
+									minRows={3}
+									multiline={true}
+									placeholder="Chcete nám nechať ešte nejakú poznámku?"
+								/>
 							</Stack>
 						))}
 
 						<Stack
 							direction={{ xs: "column", md: "row" }}
-							justifyContent={`${values.guests.length === 0? "center": "space-between"}`}
-							sx={{ px: {
-								lg:2
-							}, m: 1, my: 4 }}
+							justifyContent={`${
+								values.guests.length === 0 ? "center" : "space-between"
+							}`}
+							sx={{
+								px: {
+									lg: 2,
+								},
+								m: 1,
+								my: 4,
+							}}
 							spacing={2}>
 							<AddButton
+								className="fade-in"
 								variant="contained"
 								onClick={() =>
 									arrayHelpers.push({
@@ -236,9 +266,11 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 								Pridať hosťa
 							</AddButton>
 
-							{values.guests.length !== 0 && (<AddButton variant="contained" type="submit">
-								Odoslať
-							</AddButton>)}
+							{values.guests.length !== 0 && (
+								<AddButton className="fade-in" variant="contained" type="submit">
+									Odoslať
+								</AddButton>
+							)}
 						</Stack>
 					</Box>
 				)}

@@ -8,7 +8,7 @@ const RSVP = () => {
 	return (
 		<>
 			<div className={styles.aboutus}>
-				<h1 className={styles.heading}>RSVP: Répondez s&aposil vous plait</h1>
+				<h1 className={styles.heading}>RSVP: Répondez s´il vous plait</h1>
 				<p className={styles.paragraph} style={{ textAlign: "center" }}>
 					Viacerí z vás ste sa nás pýtali a ponúkali nám svoje pomocné ruky, chcem vás
 					preto ubezpečiť, že práve teraz nastal váš čas ako nám najlepšie pomôžete.
@@ -21,11 +21,16 @@ const RSVP = () => {
 					initialValues={{
 						guests: [],
 					}}
-					onSubmit={(values) =>
-						setTimeout(() => {
-							alert(JSON.stringify(values, null, 2));
-						}, 500)
-					}>
+					onSubmit={(values) => {
+						console.log(JSON.stringify(values, null, 2));
+						fetch("/api/sheets", {
+							method: "POST",
+							body: JSON.stringify(values),
+							headers: {
+								"Content-Type": "application/json",
+							},
+						});
+					}}>
 					{(props) => {
 						return <FieldArray name="guests" component={GuestForm} {...props} />;
 					}}

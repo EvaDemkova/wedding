@@ -3,8 +3,10 @@
 
 .navbar {
 	display: flex;
-	justify-content: space-between;
 	padding: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+	justify-content: space-evenly;
 }
 
 .logo {
@@ -12,12 +14,6 @@
 	width: 30px;
 }
 
-.first_half,
-.second_half {
-	display: flex;
-	width: 40%;
-	justify-content: space-evenly;
-}
 
 .mobile {
 	height: 81px;
@@ -25,6 +21,18 @@
 	z-index: 100;
 	margin: 0;
 	width: 100vw;
+}
+
+.mobileLink {
+	animation: fade-in 0.75s forwards 0.2s;
+	width: 100%;
+	margin: 0;
+	padding: 32px;
+cursor: pointer;
+
+	&:hover {
+		background-color: #b6b6b6;
+	}
 }
 
 .menu {

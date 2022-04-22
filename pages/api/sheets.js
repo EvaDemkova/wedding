@@ -23,6 +23,16 @@ async function handler(req, res) {
       version: 'v4',
     });
 
+    let values = [];
+
+    body.guests.forEach((guest,_i) => {
+      let arr = Object.values(guest)
+      const date = new Date();
+      console.log(date.toLocaleDateString('en-GB'))
+      arr = [...arr, date.toLocaleDateString('en-GB')]
+      values = [...values, arr]
+     })
+   
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEETS_ID,
       range: 'falala!A1:H5',
@@ -31,9 +41,10 @@ async function handler(req, res) {
       requestBody: {
         range: 'falala!A1:H5',
         majorDimension: 'ROWS',
-        values: [[1, 2, 3]],
+        values: values,
       },
     });
+
 
     res.status(200).json({ POST: response });
   }

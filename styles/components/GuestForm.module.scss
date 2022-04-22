@@ -8,8 +8,6 @@
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	text-align: center;
-	opacity: 0;
-	animation: fade-in 0.75s forwards 0.5s;
 }
 
 .paragraph {
@@ -17,11 +15,9 @@
 	font-size: 14px;
 	font-weight: 400;
 	letter-spacing: 2px;
-	opacity: 0;
-	animation: fade-in 0.75s forwards 0.5s;
-	
 }
 
-.gallery {
-	padding: 5% 10%;
+.addBtn {
+    opacity: 0;
+    animation: fade-in 0.75s forwards 0.5s;
 }

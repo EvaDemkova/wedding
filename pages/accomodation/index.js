@@ -5,17 +5,45 @@ import styles from "../../styles/pages/AboutUs.module.scss";
 const Accomodation = () => {
 	return (
 		<>
-			
-				<div className={styles.aboutus}>
-					<h1 className={styles.heading}>Accomodation</h1>
-					<p className={styles.paragraph}>
-						Myslíme na vás aj s ubytovaním ! 
-					</p>
-					<p  className={styles.paragraph}>
-						Na víkend 12-14.8 sme zarezervovali penzión Biely Dom ! 
-					</p>
-				</div>
-			
+			<div className={styles.aboutus}>
+				<h1 className="fade-in">Accomodation</h1>
+				<p className="fade-in text-center">
+					Myslíme na vás aj s ubytovaním !
+				</p>
+				<p className="fade-in">
+					Na víkend 12-14.8 sme zarezervovali penzión Biely Dom v Ružomberku ktorý je
+					vzdiaľený asi 6 min autom od miesta konania oslavy. Účastníci našej svadby budú
+					mať špeciálnu zvýhodnenú cenu. Možnosť ubytovania je s raňajkami, alebo aj bez
+					nich :)
+				</p>
+				<p className="fade-in">
+					K dispozícií je 12 izieb, jednoposteľových, dvojposteľových s možnosťou
+					prístelky a pre náročnejších dva priestranné apartmány v podkroví. Všetky izby
+					sú vybavené vlastnou kúpeľňou, WC a pripojením na internet.
+				</p>
+				<p className="fade-in text-center">
+					Odkaz na ubytovanie nájdete
+					<a
+						href="http://www.bielydom.sk/index.php?stranka=ubytovanie"
+						target="_blank"
+						style={{ fontWeight: "bold", textDecoration: "underline", color: "#215d53", marginLeft: "5px" }}>
+						TU
+					</a>
+				</p>
+				<p className="fade-in">
+					Čo sa týka rezervácie, kontaktuje priamo penzión Biely Dom a nahláste heslo
+					<i>"Evka a Vavro"</i>, prípadne kontaktuje nás
+				</p>
+
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10456.59092251561!2d19.3093181!3d49.0648265!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x92661570ec200ec9!2sPenzi%C3%B3n%20Biely%20Dom!5e0!3m2!1ssk!2scz!4v1650541727049!5m2!1ssk!2scz"
+					width="100%"
+					height="300"
+					style={{ border: "0", marginTop: "50px" }}
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
 		</>
 	);
 };

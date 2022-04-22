@@ -45,7 +45,7 @@ const Contact = () => {
                 alignItems='center'
               >
                 <LocalPhoneRoundedIcon fontSize='large' />
-                <p>{person.tel}</p>
+                <p style={{ opacity: "1"}}>{person.tel}</p>
               </Stack>
 
               <Stack
@@ -55,7 +55,7 @@ const Contact = () => {
                 alignItems='center'
               >
                 <AlternateEmailRoundedIcon fontSize='large' />
-                <p>{person.email}</p>
+                <p style={{ opacity: "1"}}>{person.email}</p>
               </Stack>
             </Stack>
           </Stack>
