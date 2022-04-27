@@ -14,10 +14,8 @@
 	width: 30px;
 }
 
-
 .mobile {
 	height: 81px;
-	// position: fixed;
 	z-index: 100;
 	margin: 0;
 	width: 100vw;
@@ -27,7 +25,8 @@
 	animation: fade-in 0.75s forwards 0.2s;
 	width: 100%;
 	margin: 0;
-	padding: 32px;
+	padding: 20px;
+
 cursor: pointer;
 
 	&:hover {

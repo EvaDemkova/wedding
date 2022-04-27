@@ -251,7 +251,7 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 							}}
 							spacing={2}>
 							<AddButton
-								className="fade-in"
+								style={{opacity: "1"}}
 								variant="contained"
 								onClick={() =>
 									arrayHelpers.push({
@@ -267,7 +267,7 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 							</AddButton>
 
 							{values.guests.length !== 0 && (
-								<AddButton className="fade-in" variant="contained" type="submit">
+								<AddButton style={{opacity: "1"}} variant="contained" type="submit">
 									Odoslať
 								</AddButton>
 							)}

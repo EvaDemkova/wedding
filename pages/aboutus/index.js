@@ -55,8 +55,8 @@ const AboutUs = () => {
 				<p className="fade-in">
 					Čas plynul, a Evka sa z Brna presťahovala do Prahy, kde sa začala kapitola sama
 					o sebe. Spoločné nažívanie. Sem tam sme pracovali, sem tam sme cestovali, zažili
-					obrovské radosti aj zopár starostí. Výber z toho najlepšieho sme dali nižšie do
-					galérie.
+					obrovské radosti aj zopár starostí. Výber z toho najlepšieho sme dali <a href="#gallery-scroll" className="styled-anchor">nižšie do
+					galérie.</a>
 				</p>
 				<p className="fade-in">
 					Jednoduché to nebolo ani pri pokuse o žiadosť o ruku, chcel som Evku požiadať na
@@ -81,9 +81,9 @@ const AboutUs = () => {
 				<p className={`fade-in text-center`} >
 					Tak dúfame, že budete súčasťou nášho ďalšieho spoločného príbehu aj vy.
 				</p>
-				<div className={styles.gallery}>
+				<div className={styles.gallery} id="gallery-scroll">
 					<h1 className={styles.heading} style={{ textAlign: "center" }}>
-						... my ...
+						... ♥ ...
 					</h1>
 					<Gallery
 						photos={photos.resources}

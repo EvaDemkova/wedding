@@ -6,28 +6,35 @@ const Accomodation = () => {
 	return (
 		<>
 			<div className={styles.aboutus}>
-				<h1 className="fade-in">Accomodation</h1>
-				<p className="fade-in text-center">
-					Myslíme na vás aj s ubytovaním !
-				</p>
+				<h1 className="fade-in">Ubytovanie</h1>
+				<p className="fade-in text-center">Myslíme na vás aj s ubytovaním !</p>
 				<p className="fade-in">
-					Na víkend 12-14.8 sme zarezervovali penzión Biely Dom v Ružomberku ktorý je
+					Na víkend<b> 12-14.8</b> sme zarezervovali penzión Biely Dom v Ružomberku ktorý je
 					vzdiaľený asi 6 min autom od miesta konania oslavy. Účastníci našej svadby budú
-					mať špeciálnu zvýhodnenú cenu. Možnosť ubytovania je s raňajkami, alebo aj bez
-					nich :)
+					mať špeciálnu zvýhodnenú cenu. Možnosť ubytovania je s raňajkami, alebo bez
+					nich.
 				</p>
 				<p className="fade-in">
 					K dispozícií je 12 izieb, jednoposteľových, dvojposteľových s možnosťou
 					prístelky a pre náročnejších dva priestranné apartmány v podkroví. Všetky izby
 					sú vybavené vlastnou kúpeľňou, WC a pripojením na internet.
 				</p>
+
+				<ul className="fade-in">
+					<li className="fade-in ">
+						20 €/deň/osoba v dvojposteľovej izbe alebo v apartmáne
+					</li>
+					<li className="fade-in ">16 €/deň prístelka (len pre deti do 13r)</li>
+					<li className="fade-in">30 €/deň jednoposteľová izba</li>
+				</ul>
+
 				<p className="fade-in text-center">
 					Odkaz na ubytovanie nájdete
 					<a
 						href="http://www.bielydom.sk/index.php?stranka=ubytovanie"
 						target="_blank"
-						rel="noreferrer" 
-						style={{ fontWeight: "bold", textDecoration: "underline", color: "#215d53", marginLeft: "5px" }}>
+						rel="noreferrer"
+						className="styled-anchor">
 						TU
 					</a>
 				</p>

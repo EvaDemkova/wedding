@@ -2,11 +2,8 @@ import React, { useRef, useState } from "react";
 import styles from "../../styles/components/Navbar.module.scss";
 import data from "../../common/data.json";
 import LinkBtn from "../linkBtn";
-import Image from "next/image";
-
 import useWindowSize from "../../hooks/useWindowSize";
 import useMobileLayout from "../../hooks/useMobileLayout";
-import axios from "axios";
 import SvgClose from "../svgComponents/svgClose.js";
 import SvgMenu from "../svgComponents/svgMenu.js";
 import Stack from "@mui/material/Stack";
@@ -17,33 +14,13 @@ export default function Navbar() {
 	const navBreakpoint = 1070;
 	const windowSize = useWindowSize();
 	const isMobile = useMobileLayout(windowSize, navBreakpoint);
-	console.log(windowSize, isMobile)
-
-	function submitHandler(data) {
-		console.log(data);
-		// fetch('/api/sheet', {
-		//   method: 'POST',
-		//   body: JSON.stringify(data),
-		//   headers: {
-		//     'Content-Type': 'application/json',
-		//   },
-		// });
-		// reset(); // clears the input on submitting
-	}
 
 	if (!isMobile) {
 		return (
 			<div className={styles.navbar}>
-				
-					{data.navbar.map((link, _i) => {
-						return <LinkBtn key={_i} path={link.path} btnText={link.title} />;
-					})}
-				
-				{/* <div className={styles.second_half}>
-					{data.navbar_part2.map((link, _i) => {
-						return <LinkBtn key={_i} path={link.path} btnText={link.title} />;
-					})}
-				</div> */}
+				{data.navbar.map((link, _i) => {
+					return <LinkBtn key={_i} path={link.path} btnText={link.title} />;
+				})}
 			</div>
 		);
 	} else {
@@ -73,7 +50,6 @@ export default function Navbar() {
 						<SvgMenu active={active} setActive={setActive} />
 					</Stack>
 					<Stack
-						// spacing={{ xs: 8 }}
 						sx={{
 							display: `${active ? "none" : "flex"}`,
 							height: `${active ? "0" : "calc(100vh - 79px)"}`,
@@ -84,8 +60,7 @@ export default function Navbar() {
 						className={styles.menu}>
 						{data.navbar.map((link, _i) => {
 							return (
-								<Link key={_i} href={link.path}
-								onClick={() => setActive(true)}>
+								<Link key={_i} href={link.path} onClick={() => setActive(true)}>
 									<h1
 										className={`${styles.mobileLink}`}
 										onClick={() => setActive(true)}>
