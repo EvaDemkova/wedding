@@ -1,5 +1,4 @@
-import React, { useRef } from "react";
-import Layout from "../../components/layout";
+import React from "react";
 import styles from "../../styles/pages/AboutUs.module.scss";
 
 const Accomodation = () => {
@@ -20,27 +19,28 @@ const Accomodation = () => {
 					sú vybavené vlastnou kúpeľňou, WC a pripojením na internet.
 				</p>
 
-				<ul className="fade-in">
-					<li className="fade-in ">
-						20 €/deň/osoba v dvojposteľovej izbe alebo v apartmáne
+				<ul className="fade-in accomodation-ul">
+					<li className="fade-in accomodation-li">
+						20€/deň/osoba v dvojposteľovej izbe alebo v apartmáne
 					</li>
-					<li className="fade-in ">16 €/deň prístelka (len pre deti do 13r)</li>
-					<li className="fade-in">30 €/deň jednoposteľová izba</li>
+					<li className="fade-in accomodation-li">16€/deň prístelka (len pre deti do 13r)</li>
+					<li className="fade-in accomodation-li">30€/deň jednoposteľová izba</li>
 				</ul>
 
 				<p className="fade-in text-center">
-					Odkaz na ubytovanie nájdete
+					Odkaz na ubytovanie nájdete 
 					<a
 						href="http://www.bielydom.sk/index.php?stranka=ubytovanie"
 						target="_blank"
 						rel="noreferrer"
-						className="styled-anchor">
-						TU
+						className="styled-anchor"
+						style={{marginLeft: 1+'px'}}>
+						 TU
 					</a>
 				</p>
 				<p className="fade-in">
 					Čo sa týka rezervácie, kontaktuje priamo penzión Biely Dom a nahláste heslo
-					<i>Evka a Vavro</i>, prípadne kontaktuje nás
+					<i> Evka a Vavro</i>, prípadne kontaktuje nás.
 				</p>
 
 				<iframe
@@ -50,7 +50,7 @@ const Accomodation = () => {
 					style={{ border: "0", marginTop: "50px" }}
 					allowFullScreen=""
 					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"></iframe>
+					referrerPolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</>
 	);

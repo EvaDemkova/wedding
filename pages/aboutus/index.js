@@ -47,9 +47,9 @@ const AboutUs = () => {
 					kde sme pri prvom nápoji stvrdili svoje nové kamarátstvo.
 				</p>
 				<p className="fade-in">
-					Najvýznamnejším obratom však bol spoločný ples asi o rok neskôr, kde sme sa po
-					pretancovanej noci, samozrejme úplne triezvy, dohodli, že by sme to spolu mohli
-					skúsiť. No a keďže túto dohodu si pamätal len jeden z nás, tak pre druhého to
+					Najvýznamnejším obratom bol spoločný ples o rok neskôr. Po
+					pretancovanej noci, samozrejme úplne triezvy  prišlo vyznanie lásky, po ktorom sme sa rozhodli, že by sme to spolu mohli
+					skúsiť. No a keďže túto skutčnosť si pamätal len jeden z nás, tak pre druhého to
 					bolo na ďalší deň v skutku veľké prekvapenie :)
 				</p>
 				<p className="fade-in">
@@ -73,10 +73,10 @@ const AboutUs = () => {
 					bez lyží :){" "}
 				</p>
 
-				<p className="fade-in">
+				<p className="fade-in ">
 					A tak sa začala črtať ďalšia kapitola nášho príbehu, ktorá sa oficiálne začne{" "}
 					<b>13.8.2022.</b> Neoficiálne sa začala, keď sme si kúpili nášho nového člena
-					domácnosti nášho psa Kaspera ♥.
+					domácnosti nášho psa Kaspera ♥
 				</p>
 				<p className={`fade-in text-center`} >
 					Tak dúfame, že budete súčasťou nášho ďalšieho spoločného príbehu aj vy.

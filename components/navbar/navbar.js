@@ -55,7 +55,8 @@ export default function Navbar() {
 							height: `${active ? "0" : "calc(100vh - 79px)"}`,
 						}}
 						direction="column"
-						justifyContent="space-evenly"
+						spacing={{ xs: 8}}
+						// justifyContent="space-evenly"
 						alignItems="center"
 						className={styles.menu}>
 						{data.navbar.map((link, _i) => {

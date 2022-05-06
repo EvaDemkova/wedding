@@ -40,7 +40,7 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 	});
 
 	const AddButton = styled(Button)({
-		backgroundColor: "#0D4B1E",
+		backgroundColor: "#136f63",
 		color: "white",
 		fontWeight: "bold",
 		opacity: "0",
@@ -52,7 +52,7 @@ const GuestForm = ({ move, swap, push, insert, unshift, pop, form }) => {
 		// 	color: "#cc0000",
 		// },
 		"&:hover": {
-			backgroundColor: "#2d8c7c"
+			backgroundColor: "#22aaa1"
 		}
 	});
 

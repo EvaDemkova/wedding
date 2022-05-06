@@ -6,30 +6,39 @@ const Celebration = () => {
 	return (
 		<>
 			<div className={styles.aboutus}>
-				<h1 className={styles.heading}>Oslava</h1>
-				<p className={styles.paragraph}>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam
-					metus. Nullam feugiat, turpis at pulvinar vulputate, erat libero tristique
-					tellus, nec bibendum odio risus sit amet ante. Etiam posuere lacus quis dolor.
-					Duis pulvinar. Duis condimentum augue id magna semper rutrum. Proin in tellus
-					sit amet nibh dignissim sagittis. Nullam sit amet magna in magna gravida
-					vehicula. Nulla pulvinar eleifend sem. Phasellus et lorem id felis nonummy
-					placerat. Aliquam erat volutpat. Vestibulum erat nulla, ullamcorper nec, rutrum
-					non, nonummy ac, erat. Nulla turpis magna, cursus sit amet, suscipit a, interdum
-					id, felis. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Lorem
-					ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus
-					et magnis dis parturient montes, nascetur ridiculus mus. Duis viverra diam non
-					justo. Aliquam in lorem sit amet leo accumsan lacinia. Mauris tincidunt sem sed
-					arcu. Nullam rhoncus aliquam metus. Maecenas ipsum velit, consectetuer eu
-					lobortis ut, dictum at dui. Etiam quis quam. Cras elementum.
+				<h1 className="fade-in">Oslava</h1>
+
+				<p className="fade-in">
+					Po obrade v kaštieli sa spoločne presunieme do priestorov Kultúrneho domu v
+					Ludrovej pri Ružomberku. Kde na nás už bude všetko čakať :) Nebudeme vám ale nič
+					prezrádzať, tak sa nechajte prekvapiť.
 				</p>
-				<p className={styles.paragraph}>
-					In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet
-					sapien wisi sed libero. Donec vitae arcu. Curabitur bibendum justo non orci.
-					Fusce wisi. Etiam egestas wisi a erat. Praesent dapibus. Nulla non arcu lacinia
-					neque faucibus fringilla. Nulla est. Pellentesque arcu. Aliquam erat volutpat.
-					Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui.
+
+				<p className="fade-in text-center">
+					
+					Ak chcete priložiť ruku k dielu, nezabudnite nám vyplniť krátky formulár hosťa v{" "}
+					<a href="/rsvp" className="styled-anchor">
+						RSVP
+					</a>{" "}
+					záložke.
 				</p>
+
+				<h3 className="fade-in">DOPRAVA</h3>
+				<p className="fade-in text-center">
+					V okolí KD je obmedzené miesto parkovania, zvážte prosím preto dopravu autom do
+					Ludrovej a využite radšej plánovanú dopravu autobusmi. <br/>
+					Počas celej oslavy vám
+					budú k dispozícií šoféri a autá, pre akýkoľvek prípad :)
+				</p>
+
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1307.5586072187066!2d19.330214458053536!3d49.04639485287537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4715a764ab046111%3A0xf3464c84ef98ce9f!2zT2JlY27DvSDDunJhZA!5e0!3m2!1scs!2scz!4v1651828082577!5m2!1scs!2scz"
+					width="100%"
+					height="300"
+					style={{ border: "0", marginTop: "50px" }}
+					allowFullScreen=""
+					loading="lazy"
+					referrerPolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</>
 	);
