@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Layout from "../../components/layout";
 import styles from "../../styles/pages/AboutUs.module.scss";
+import Link from 'next/link'
 
 const Celebration = () => {
 	return (
@@ -17,9 +18,9 @@ const Celebration = () => {
 				<p className="fade-in text-center">
 					
 					Ak chcete priložiť ruku k dielu, nezabudnite nám vyplniť krátky formulár hosťa v{" "}
-					<a href="/rsvp" className="styled-anchor">
-						RSVP
-					</a>{" "}
+					<Link href="/rsvp">
+						<a className="styled-anchor">RSVP</a>
+					</Link>{" "}
 					záložke.
 				</p>
 
