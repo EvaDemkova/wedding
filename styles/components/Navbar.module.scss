@@ -1,54 +1,54 @@
-@use "../animations.scss";
+@use '../animations.scss';
 @include animations.fade-in;
 
 .navbar {
-	display: flex;
-	padding: 10px;
-	margin-bottom: 20px;
-	width: 100%;
-	justify-content: space-evenly;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .logo {
-	opacity: 0;
-	width: 30px;
+  opacity: 0;
+  width: 30px;
 }
 
 .mobile {
-	height: 81px;
-	z-index: 100;
-	margin: 0;
-	width: 100vw;
+  height: 81px;
+  z-index: 100;
+  margin: 0;
+  width: 100vw;
 }
 
 .mobileLink {
-	animation: fade-in 0.75s forwards 0.2s;
-	width: 100%;
-	margin: 0;
-	// padding: 20px;
+  animation: fade-in 0.75s forwards 0.2s;
+  width: 100%;
+  margin: 0;
+  padding: 30px;
 
-cursor: pointer;
+  cursor: pointer;
 
-	&:hover {
-		background-color: #b6b6b6;
-	}
+  &:hover {
+    background-color: #b6b6b6;
+  }
 }
 
 .menu {
-	z-index: 100;
-	position: fixed;
-	top: 80px;
-	margin: 0;
-	background-image: linear-gradient(
-		to right,
-		#e4e3de,
-		#dbdad5,
-		#d3d2cd,
-		#cfcec9,
-		#cccbc6,
-		#c9cac4,
-		#c5c7c4
-	);
+  z-index: 100;
+  position: fixed;
+  top: 80px;
+  margin: 0;
+  background-image: linear-gradient(
+    to right,
+    #e4e3de,
+    #dbdad5,
+    #d3d2cd,
+    #cfcec9,
+    #cccbc6,
+    #c9cac4,
+    #c5c7c4
+  );
 
-	width: 100vw;
+  width: 100vw;
 }

@@ -1,19 +1,19 @@
-import React, { useRef, useState } from "react";
-import styles from "../../styles/components/Navbar.module.scss";
-import data from "../../common/data.json";
-import LinkBtn from "../linkBtn";
-import useWindowSize from "../../hooks/useWindowSize";
-import useMobileLayout from "../../hooks/useMobileLayout";
-import SvgClose from "../svgComponents/svgClose.js";
-import SvgMenu from "../svgComponents/svgMenu.js";
-import Stack from "@mui/material/Stack";
-import Link from "next/dist/client/link";
+import React, { useRef, useState } from 'react';
+import styles from '../../styles/components/Navbar.module.scss';
+import data from '../../common/data.json';
+import LinkBtn from '../linkBtn';
+import useWindowSize from '../../hooks/useWindowSize';
+import useMobileLayout from '../../hooks/useMobileLayout';
+import SvgClose from '../svgComponents/svgClose.js';
+import SvgMenu from '../svgComponents/svgMenu.js';
+import Stack from '@mui/material/Stack';
+import Link from 'next/dist/client/link';
 
 export default function Navbar() {
-	const [active, setActive] = useState(true);
-	const navBreakpoint = 1070;
-	const windowSize = useWindowSize();
-	const isMobile = useMobileLayout(windowSize, navBreakpoint);
+  const [active, setActive] = useState(true);
+  const navBreakpoint = 1070;
+  const windowSize = useWindowSize();
+  const isMobile = useMobileLayout(windowSize, navBreakpoint);
 
 	if (!isMobile) {
 		return (
