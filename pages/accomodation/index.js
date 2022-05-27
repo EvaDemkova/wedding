@@ -8,9 +8,9 @@ const Accomodation = () => {
 				<h1 className="fade-in">Ubytovanie</h1>
 				<p className="fade-in text-center">Myslíme na vás aj s ubytovaním !</p>
 				<p className="fade-in">
-					Na víkend<b> 12-14.8</b> sme zarezervovali penzión Biely Dom v Ružomberku ktorý je
-					vzdiaľený asi 6 min autom od miesta konania oslavy. Účastníci našej svadby budú
-					mať špeciálnu zvýhodnenú cenu. Možnosť ubytovania je s raňajkami, alebo bez
+					Na víkend<b> 12-14.8</b> sme zarezervovali penzión Biely Dom v Ružomberku ktorý
+					je vzdiaľený asi 6 min autom od miesta konania oslavy. Účastníci našej svadby
+					budú mať špeciálnu zvýhodnenú cenu. Možnosť ubytovania je s raňajkami, alebo bez
 					nich.
 				</p>
 				<p className="fade-in">
@@ -23,24 +23,30 @@ const Accomodation = () => {
 					<li className="fade-in accomodation-li">
 						20€/deň/osoba v dvojposteľovej izbe alebo v apartmáne
 					</li>
-					<li className="fade-in accomodation-li">16€/deň prístelka (len pre deti do 13r)</li>
+					<li className="fade-in accomodation-li">
+						16€/deň prístelka (len pre deti do 13r)
+					</li>
 					<li className="fade-in accomodation-li">30€/deň jednoposteľová izba</li>
 				</ul>
 
 				<p className="fade-in text-center">
-					Odkaz na ubytovanie nájdete 
+					Odkaz na ubytovanie nájdete
 					<a
 						href="http://www.bielydom.sk/index.php?stranka=ubytovanie"
 						target="_blank"
 						rel="noreferrer"
 						className="styled-anchor"
-						style={{marginLeft: 1+'px'}}>
-						 TU
+						style={{ marginLeft: 1 + "px" }}>
+						TU
 					</a>
 				</p>
 				<p className="fade-in">
-					Čo sa týka rezervácie, kontaktuje priamo penzión Biely Dom a nahláste heslo
-					<i> Evka a Vavro</i>, prípadne kontaktuje nás.
+					Čo sa týka rezervácie, kontaktuje priamo nás, ubytovanie vám Vavro zarezervuje. 
+				</p>
+
+				<p className="fade-in">
+					Ak by naše ubytovanie nespĺňalo vaše požiadavky, v meste je mnoho ďalších
+					ubytovacích možností, ktoré môžete využiť.
 				</p>
 
 				<iframe

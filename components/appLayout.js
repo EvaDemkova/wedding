@@ -1,10 +1,9 @@
 import React, { useRef } from "react";
 import styles from "../styles/components/AppLayout.module.scss";
 import Head from "next/head";
-import favicon from '../public/images/favicon.png'
+import favicon from "../public/images/favicon.png";
 
 const AppLayout = ({ children }) => {
-	console.log(favicon)
 	return (
 		<>
 			<div className={styles.container}>

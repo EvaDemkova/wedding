@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form, Field, FieldArray, useFormikContext } from 'formik';
+import { Formik, Form, Field, FieldArray, useFormikContext, ErrorMessage, getIn } from 'formik';
 
 import { Box, TextField, FormControl,
   Select,
@@ -46,11 +46,7 @@ const CssLabel= styled(FormLabel)({
 
 
 const textField = ({form, field, id, label, disabled, onChage, multiline, minRows, variant, placeholder }) => {
-  const {setFieldValue} = form;
-
-  const handleChange = (e) => {
-    setFieldValue(field.name, e.target.value)
-  };
+  const {setFieldValue, handleChange} = form;
 
   return (
     <FormControl variant="standard" sx={{ m: "8px 8px 2px 8px",  justifyContent:"space-between", display: `${disabled? "none": "flex"}` }}>
@@ -60,15 +56,17 @@ const textField = ({form, field, id, label, disabled, onChage, multiline, minRow
         variant={variant? variant:'standard'}
         defaultValue=''
         disabled={disabled}
-        error={false}
+        
         fullWidth={false}
         id={id}
         // size="small"
-        onChange={(e) => handleChange(e)}
+        onChange={handleChange}
         multiline={multiline}
         minRows={minRows}
         placeholder={placeholder}
+        error={getIn(form.errors, field.name) && getIn(form.touched, field.name)} 
       />
+      <ErrorMessage component="div" name={field.name} style={{ color: '#cc0000' }}/>
     </FormControl>
   );
 };

@@ -55,7 +55,7 @@ export default function Navbar() {
 							height: `${active ? "0" : "calc(100vh - 79px)"}`,
 						}}
 						direction="column"
-						spacing={{ xs: 8}}
+						spacing={{ xs: 5}}
 						// justifyContent="space-evenly"
 						alignItems="center"
 						className={styles.menu}>
