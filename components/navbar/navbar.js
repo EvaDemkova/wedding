@@ -55,6 +55,7 @@ export default function Navbar() {
             sx={{
               display: `${active ? 'none' : 'flex'}`,
               height: `${active ? '0' : 'calc(100vh - 79px)'}`,
+              overflow: "auto"
             }}
             direction='column'
             spacing={{ xs: 3 }}
