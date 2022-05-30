@@ -28,8 +28,7 @@ async function handler(req, res) {
     body.guests.forEach((guest,_i) => {
       let arr = Object.values(guest)
       const date = new Date();
-      console.log(date.toLocaleDateString('en-GB'))
-      arr = [...arr, date.toLocaleDateString('en-GB')]
+      arr = [...arr, date.toLocaleString()]
       values = [...values, arr]
      })
    
