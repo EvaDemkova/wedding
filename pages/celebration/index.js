@@ -11,8 +11,7 @@ const Celebration = () => {
 
 				<p className="fade-in">
 					Po obrade v kaštieli sa spoločne presunieme do priestorov Kultúrneho domu v
-					Ludrovej pri Ružomberku. Kde na nás už bude všetko čakať :) Nebudeme vám ale nič
-					prezrádzať, tak sa nechajte prekvapiť.
+					Ludrovej pri Ružomberku. Kde na nás už bude všetko čakať :)
 				</p>
 
 				<p className="fade-in text-center">
