@@ -19,14 +19,14 @@ const Ceremony = () => {
 					<b>Kaštieli Kubínyi vo Vyšnom Kubíne</b>
 				</h3>
 
-				<p className="fade-in text-center">
+				<p className="fade-in">
 					Povieme si svoje <b>„áno“</b> pod holým nebom s výhľadom na Veľký Choč, v
 					romantickom anglickom parku za účasti rodiny a kamarátov. V prípade zlého
 					počasia sa svadba uskutoční vo vnútorných priestoroch kašieľa. Sú bohužiaľ
 					menšie, preto všetci dúfajte v pekné počasie :)
 				</p>
 
-				<h3 className="fade-in">SVADOBNÉ DARY</h3>
+				<h2 className="fade-in">SVADOBNÉ DARY</h2>
 				<p className="fade-in text-center">
 					Ak si snáď niekto z Vás so svadobným darom hlavu láme,
 					<br /> vedzte, že už skoro všetko máme,
@@ -38,14 +38,14 @@ const Ceremony = () => {
 				</p>
 
 				<h3 className="fade-in">FOTENIE</h3>
-				<p className="fade-in text-center">
+				<p className="fade-in">
 					V prípade pekného počasia, by sme radi po obrade zorganizovali fotenie vrámci
 					kaštiela v parku :). Ak nám počasie priať nebude, presunuli by sme fotenie až do
 					kultúrneho domu k fotostene.
 				</p>
 
-				<h3 className="fade-in">DOPRAVA</h3>
-				<p className="fade-in text-center">
+				<h2 className="fade-in">DOPRAVA</h2>
+				<p className="fade-in">
 					Kaštieľ sa nachádza cca 15 minút autom od Ružomberka, preto čo sa týka dopravy
 					na miesto konania obradu a následne aj oslavy, bude zabezpečený autobus/možno
 					dva pre hostí. Samozrejme je možné sa dopraviť aj vlastným auto, berte prosím

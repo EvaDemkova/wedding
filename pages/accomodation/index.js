@@ -56,22 +56,22 @@ const Accomodation = () => {
 					<ul>
 						Napríklad:
 						<li style={{ marginTop: 5 + "px" }}>
-							<a href="https://hotelkultura.sk/" className="styled-anchor">
+							<a href="https://hotelkultura.sk/" className="styled-anchor" target="_blank">
 								Hotel Kultúra
 							</a>
 						</li>
 						<li style={{ marginTop: 5 + "px" }}>
-							<a href="http://hotelacko.sk/" className="styled-anchor">
+							<a href="http://hotelacko.sk/" className="styled-anchor" target="_blank" >
 								Hotel Áčko
 							</a>
 						</li>
 						<li style={{ marginTop: 5 + "px" }}>
-							<a href="https://penzionblesk.sk/sk/" className="styled-anchor">
+							<a href="https://penzionblesk.sk/sk/" className="styled-anchor" target="_blank">
 								Penzion Blesk
 							</a>
 						</li>
 						<li style={{ marginTop: 5 + "px" }}>
-							<a href="https://highway.frage.sk/" className="styled-anchor">
+							<a href="https://highway.frage.sk/" className="styled-anchor" target="_blank">
 								Penzión Highway
 							</a>{" "}
 							- hneď vedľa Evkinej bytovky

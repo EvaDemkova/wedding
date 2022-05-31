@@ -189,7 +189,7 @@ const RSVP = () => {
                             alignItems={'center'}
                             sx={{ mx: 1 }}
                           >
-                            <h3 className={styles.heading}>Hosť {index + 1}</h3>
+                            <h3 className={styles.heading}>{getIn(values, `guests.${index}.name`)? getIn(values, `guests.${index}.name`) :(` Hosť ${index + 1}`)}</h3>
                             <CssButton
                               style={{}}
                               variant='outlined'
@@ -246,7 +246,7 @@ const RSVP = () => {
                                 },
                               ]}
                             />
-                            <FastField
+                            <Field
                               component={TextField}
                               name={`guests.${index}.otherAlcohol`}
                               id={`id_otherAlcohol_${index}`}
@@ -296,7 +296,7 @@ const RSVP = () => {
                                   value: 'vegán',
                                 },
                                 {
-                                  label: 'Iné',
+                                  label: 'Iné alebo viac možností',
                                   value: 'iné',
                                 },
                                 {
@@ -306,20 +306,22 @@ const RSVP = () => {
                               ]}
                             />
 
-                            <FastField
-                              component={TextField}
-                              name={`guests.${index}.otherAlergy`}
-                              id={`id_otherAlergy_${index}`}
-                              label='Iné potravinové alergie'
-                              disabled={
-                                getIn(values, `guests.${index}.foodAlergy`) !==
-                                'iné'
-                              }
-                              value={getIn(
-                                values,
-                                `guests.${index}.otherAlergy`
-                              )}
-                            />
+                          
+                              <Field
+                                component={TextField}
+                                name={`guests.${index}.otherAlergy`}
+                                id={`id_otherAlergy_${index}`}
+                                label='Iné potravinové alergie'
+                                disabled={
+                                  getIn(values, `guests.${index}.foodAlergy`) !==
+                                  'iné'
+                                }
+                                value={getIn(
+                                  values,
+                                  `guests.${index}.otherAlergy`
+                                )}
+                              />
+                           
                           </Stack>
                           {/* <FastField
 														component={Radios}

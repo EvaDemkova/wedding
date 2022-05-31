@@ -14,7 +14,7 @@ const Celebration = () => {
 					Ludrovej pri Ružomberku. Kde na nás už bude všetko čakať :)
 				</p>
 
-				<p className="fade-in text-center">
+				<p className="fade-in ">
 					
 					Ak chcete priložiť ruku k dielu, nezabudnite nám vyplniť krátky formulár hosťa v{" "}
 					<Link href="/rsvp">
@@ -24,7 +24,7 @@ const Celebration = () => {
 				</p>
 
 				<h3 className="fade-in">DOPRAVA</h3>
-				<p className="fade-in text-center">
+				<p className="fade-in ">
 					V okolí KD je obmedzené miesto parkovania, zvážte prosím preto dopravu autom do
 					Ludrovej a využite radšej plánovanú dopravu autobusmi. <br/>
 					Počas celej oslavy vám
