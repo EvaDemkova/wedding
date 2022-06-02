@@ -10,13 +10,12 @@ const Accomodation = () => {
 				<p className="fade-in">
 					Na víkend<b> 12-14.8</b> sme zarezervovali penzión Biely Dom v Ružomberku ktorý
 					je vzdiaľený asi 6 min autom od miesta konania oslavy. Účastníci našej svadby
-					budú mať zvýhodnenú cenu. Možnosť ubytovania je s raňajkami, alebo bez
-					nich.
+					budú mať zvýhodnenú cenu. Možnosť ubytovania je s raňajkami, alebo bez nich.
 				</p>
 				<p className="fade-in">
 					K dispozícií je 12 izieb, jednoposteľových, dvojposteľových s možnosťou
-					prístelky. Všetky izby
-					sú vybavené vlastnou kúpeľňou, WC a pripojením na internet.
+					prístelky. Všetky izby sú vybavené vlastnou kúpeľňou, WC a pripojením na
+					internet.
 				</p>
 
 				<ul className="fade-in accomodation-ul">
@@ -48,35 +47,51 @@ const Accomodation = () => {
 
 				<p className="fade-in ">
 					<b>
-						Ak by bola kapacita penziónu naplnená alebo by ubytovanie nespĺňalo
-						vaše požiadavky, v meste je mnoho ďalších ubytovacích možností, ktoré môžete
+						Ak by bola kapacita penziónu naplnená alebo by ubytovanie nespĺňalo vaše
+						požiadavky, v meste je mnoho ďalších ubytovacích možností, ktoré môžete
 						využiť.
 					</b>
 					<br />
 					<ul>
 						Napríklad:
 						<li style={{ marginTop: 5 + "px" }}>
-							<a href="https://hotelkultura.sk/" className="styled-anchor" target="_blank">
+							<a
+								href="https://hotelkultura.sk/"
+								className="styled-anchor"
+								target="_blank"
+								rel="noreferrer">
 								Hotel Kultúra
 							</a>
 						</li>
 						<li style={{ marginTop: 5 + "px" }}>
-							<a href="http://hotelacko.sk/" className="styled-anchor" target="_blank" >
+							<a
+								href="http://hotelacko.sk/"
+								className="styled-anchor"
+								target="_blank"
+								rel="noreferrer">
 								Hotel Áčko
 							</a>
 						</li>
 						<li style={{ marginTop: 5 + "px" }}>
-							<a href="https://penzionblesk.sk/sk/" className="styled-anchor" target="_blank">
+							<a
+								href="https://penzionblesk.sk/sk/"
+								className="styled-anchor"
+								target="_blank"
+								rel="noreferrer">
 								Penzion Blesk
 							</a>
 						</li>
 						<li style={{ marginTop: 5 + "px" }}>
-							<a href="https://highway.frage.sk/" className="styled-anchor" target="_blank">
+							<a
+								href="https://highway.frage.sk/"
+								className="styled-anchor"
+								target="_blank"
+								rel="noreferrer">
 								Penzión Highway
 							</a>{" "}
 							- hneď vedľa Evkinej bytovky
 						</li>
-						<li  style={{ marginTop: 5 + "px" }}>... a ďalšie</li>
+						<li style={{ marginTop: 5 + "px" }}>... a ďalšie</li>
 					</ul>{" "}
 				</p>
 
